@@ -1,201 +1,286 @@
-
-
 # Alcance del MVP — Kubo PH
 
-**Versión:** 0.1  
-**Estado:** En definición  
-**Tipo de producto:** Plataforma web para la gestión de propiedad horizontal.
+**Versión:** 0.2  
+**Estado:** Propuesta para validación  
+**Producto:** Kubo PH  
+**Tipo:** Plataforma web de gestión de propiedad horizontal.
 
-## 1. Objetivo del MVP
+## 1. Propósito
 
-Construir una primera versión funcional de Kubo PH que permita a una administración gestionar y centralizar la información y los principales procesos de una copropiedad.
+Definir el alcance funcional de la primera versión de Kubo PH (Minimum Viable Product - MVP).
 
-El MVP debe establecer una base tecnológica organizada, segura, escalable y flexible, que permita incorporar nuevas funcionalidades sin tener que reconstruir el sistema.
+El objetivo es construir una plataforma que permita a una administración gestionar la información y los procesos esenciales de una copropiedad desde un único lugar.
 
-La primera versión estará enfocada en el usuario administrativo. La incorporación de residentes se contempla para una etapa posterior.
+La solución deberá construirse sobre una arquitectura modular, escalable y flexible, que permita incorporar funcionalidades progresivamente y atender múltiples copropiedades.
 
-## 2. Alcance funcional propuesto
+## 2. Usuarios objetivo
 
-Los siguientes módulos representan el alcance candidato del producto. Las funcionalidades deberán analizarse y priorizarse antes de considerarse comprometidas para el lanzamiento.
+### 2.1. Usuario principal: Administración
 
-### 2.1. Configuración y gestión de copropiedades
+Será el usuario central del MVP.
 
-- [ ] Registrar una copropiedad.
-- [ ] Consultar y actualizar la información de la copropiedad.
-- [ ] Configurar datos generales de identificación y contacto.
-- [ ] Registrar torres, bloques o sectores.
-- [ ] Configurar nomenclatura y clasificación de inmuebles.
-- [ ] Gestionar parámetros y configuraciones particulares de cada copropiedad.
-- [ ] Permitir administrar más de una copropiedad desde una misma cuenta administrativa.
+Necesita:
+- Administrar una o varias copropiedades.
+- Gestionar propietarios, residentes e inmuebles.
+- Consultar información financiera y administrativa.
+- Organizar documentos.
+- Realizar seguimiento a procesos.
+- Generar información y reportes.
 
-### 2.2. Usuarios, autenticación y permisos
+### 2.2. Usuarios complementarios
 
-- [ ] Crear e iniciar sesión con una cuenta administrativa.
-- [ ] Gestionar usuarios del sistema.
-- [ ] Definir roles y permisos.
-- [ ] Restringir el acceso según el rol asignado.
-- [ ] Separar la información de cada copropiedad.
-- [ ] Registrar actividad y cambios relevantes realizados por los usuarios.
-- [ ] Definir mecanismos de recuperación de acceso.
+Se contempla la participación de auxiliares administrativos, contadores y otros colaboradores, según los permisos que se definan.
 
-### 2.3. Gestión de personas
+### 2.3. Usuarios futuros
 
-- [ ] Registrar personas.
+Se contempla incorporar propietarios y residentes mediante un portal con funcionalidades de consulta y autogestión.
+
+Este portal no forma parte del alcance inicial confirmado.
+
+## 3. Alcance funcional del MVP
+
+Las siguientes funcionalidades constituyen una propuesta de alcance. Las casillas representan elementos por validar, no funcionalidades ya implementadas.
+
+### 3.1. Gestión de copropiedades
+
+- [ ] Registrar copropiedades.
+- [ ] Consultar y actualizar información general.
+- [ ] Configurar datos de identificación y contacto.
+- [ ] Registrar torres, bloques y sectores.
+- [ ] Configurar nomenclatura de inmuebles.
+- [ ] Registrar parámetros particulares de cada copropiedad.
+- [ ] Administrar varias copropiedades desde una misma cuenta.
+- [ ] Mantener separada la información de cada copropiedad.
+
+### 3.2. Usuarios y seguridad
+
+- [ ] Crear cuentas de usuarios administrativos.
+- [ ] Implementar autenticación.
+- [ ] Gestionar roles y permisos.
+- [ ] Controlar el acceso a módulos y funcionalidades.
+- [ ] Restringir el acceso según las copropiedades autorizadas.
+- [ ] Registrar operaciones relevantes.
+- [ ] Gestionar recuperación de contraseñas.
+
+### 3.3. Gestión de personas
+
+- [ ] Registrar personas naturales.
 - [ ] Consultar y actualizar información personal.
-- [ ] Identificar propietarios.
-- [ ] Identificar residentes.
-- [ ] Registrar datos de contacto.
+- [ ] Registrar propietarios.
+- [ ] Registrar residentes.
+- [ ] Gestionar datos de contacto.
 - [ ] Relacionar personas con uno o varios inmuebles.
-- [ ] Permitir diferentes tipos de vínculos entre personas e inmuebles.
-- [ ] Consultar el historial de relaciones.
-- [ ] Registrar cambios de propietarios y residentes.
-- [ ] Evitar duplicidad de registros.
+- [ ] Identificar el tipo de relación con cada inmueble.
+- [ ] Evitar registros duplicados.
+- [ ] Consultar relaciones vigentes.
+- [ ] Conservar historial de relaciones.
 
-### 2.4. Gestión de inmuebles
+### 3.4. Gestión de inmuebles
 
 - [ ] Registrar inmuebles.
-- [ ] Identificar cada inmueble mediante su nomenclatura.
-- [ ] Asociar inmuebles a torres, bloques o sectores.
-- [ ] Registrar información complementaria del inmueble.
-- [ ] Relacionar inmuebles con propietarios y residentes.
-- [ ] Consultar el historial de ocupación y propiedad.
-- [ ] Consultar la información individual de cada inmueble.
+- [ ] Asociarlos a una copropiedad.
+- [ ] Identificar torre, bloque o sector.
+- [ ] Registrar nomenclatura.
+- [ ] Registrar coeficientes de copropiedad, cuando aplique.
+- [ ] Asociar propietarios y residentes.
+- [ ] Consultar información individual del inmueble.
+- [ ] Consultar historial de ocupación y propiedad.
 
-### 2.5. Gestión de cartera
+### 3.5. Cartera y obligaciones
 
 - [ ] Configurar conceptos de cobro.
 - [ ] Configurar cuotas de administración.
 - [ ] Definir periodos de facturación.
 - [ ] Configurar fechas de vencimiento.
 - [ ] Configurar descuentos por pronto pago.
-- [ ] Definir reglas de mora e intereses.
-- [ ] Registrar obligaciones por inmueble.
+- [ ] Configurar reglas de mora.
+- [ ] Generar obligaciones por inmueble.
 - [ ] Consultar saldos pendientes.
 - [ ] Consultar estados de cuenta.
 - [ ] Identificar inmuebles en mora.
-- [ ] Gestionar acuerdos de pago.
-- [ ] Registrar abonos y saldos.
-- [ ] Consultar el historial de cartera.
+- [ ] Registrar acuerdos de pago.
+- [ ] Consultar historial de obligaciones.
 - [ ] Generar reportes de cartera.
 
-### 2.6. Gestión de pagos y movimientos financieros
+### 3.6. Pagos y recaudos
 
-- [ ] Registrar pagos.
-- [ ] Asociar pagos con inmuebles y obligaciones.
-- [ ] Registrar fechas, valores y medios de pago.
-- [ ] Adjuntar soportes de pago.
-- [ ] Consultar historial de pagos.
+- [ ] Registrar pagos manualmente.
+- [ ] Asociar pagos con inmuebles.
+- [ ] Aplicar pagos a obligaciones.
 - [ ] Gestionar pagos parciales.
-- [ ] Identificar pagos pendientes de aplicar.
-- [ ] Importar información desde archivos Excel.
+- [ ] Registrar fecha, valor y medio de pago.
+- [ ] Adjuntar comprobantes.
+- [ ] Consultar historial de pagos.
+- [ ] Identificar pagos pendientes de aplicación.
+- [ ] Importar información desde Excel.
 - [ ] Importar extractos bancarios.
-- [ ] Facilitar la conciliación de movimientos.
+- [ ] Facilitar conciliación bancaria.
 - [ ] Identificar posibles pagos duplicados.
-- [ ] Generar reportes de recaudo.
 
-### 2.7. Gestión documental
+### 3.7. Gestión financiera y contable
 
-- [ ] Crear y organizar documentos.
-- [ ] Clasificar documentos por categorías.
-- [ ] Asociar documentos a copropiedades, personas e inmuebles.
-- [ ] Adjuntar archivos.
+- [ ] Registrar ingresos.
+- [ ] Registrar egresos.
+- [ ] Clasificar movimientos financieros.
+- [ ] Organizar soportes de ingresos y gastos.
+- [ ] Consultar movimientos por periodo.
+- [ ] Gestionar presupuestos.
+- [ ] Comparar presupuesto y ejecución.
+- [ ] Generar informes financieros.
+
+**Alcance pendiente:** determinar si Kubo PH incluirá contabilidad completa o si inicialmente ofrecerá herramientas de control financiero y administrativo.
+
+### 3.8. Gestión documental
+
+- [ ] Cargar archivos.
 - [ ] Consultar y descargar documentos.
-- [ ] Gestionar versiones de documentos.
-- [ ] Definir formatos de archivo admitidos.
+- [ ] Clasificar documentos por categorías.
+- [ ] Asociar documentos a copropiedades.
+- [ ] Relacionar documentos con personas e inmuebles.
 - [ ] Organizar plantillas administrativas.
-- [ ] Permitir adaptar plantillas a cada copropiedad.
+- [ ] Adaptar plantillas según la copropiedad.
 - [ ] Generar documentos a partir de plantillas.
-- [ ] Exportar documentos en formatos compatibles.
+- [ ] Gestionar formatos de archivo.
+- [ ] Conservar versiones de documentos.
 
-### 2.8. Comunicaciones y convivencia
+### 3.9. Comunicaciones y convivencia
 
-- [ ] Crear comunicados.
-- [ ] Utilizar plantillas de comunicación.
-- [ ] Adaptar diseños y contenido de las plantillas.
-- [ ] Registrar llamados de atención.
+- [ ] Elaborar comunicados.
+- [ ] Gestionar plantillas de comunicados.
+- [ ] Elaborar llamados de atención.
 - [ ] Asociar comunicaciones con inmuebles y personas.
-- [ ] Consultar el historial de comunicaciones.
-- [ ] Gestionar estados de los documentos.
-- [ ] Generar documentos para impresión o distribución.
+- [ ] Registrar fechas y motivos.
+- [ ] Adjuntar evidencias y soportes.
+- [ ] Consultar historial de comunicaciones.
+- [ ] Generar documentos listos para impresión o distribución.
 
-### 2.9. Gestión administrativa y operativa
+### 3.10. Solicitudes y PQR
 
-- [ ] Registrar solicitudes administrativas.
-- [ ] Gestionar tareas y actividades.
+- [ ] Registrar solicitudes.
+- [ ] Registrar peticiones, quejas y reclamos.
+- [ ] Identificar solicitantes.
+- [ ] Clasificar solicitudes.
 - [ ] Asignar responsables.
-- [ ] Definir fechas y estados de seguimiento.
-- [ ] Registrar mantenimientos.
-- [ ] Gestionar novedades de zonas comunes.
-- [ ] Consultar historial de actividades.
-- [ ] Organizar eventos y actividades de la copropiedad.
+- [ ] Registrar fechas y estados.
+- [ ] Adjuntar documentos.
+- [ ] Registrar respuestas.
+- [ ] Consultar historial y seguimiento.
 
-### 2.10. Informes y consultas
+### 3.11. Proveedores y contratos
 
-- [ ] Consultar indicadores generales de administración.
-- [ ] Generar reportes de personas e inmuebles.
-- [ ] Generar reportes de cartera.
-- [ ] Generar reportes de pagos.
-- [ ] Consultar información por periodos.
+- [ ] Registrar proveedores.
+- [ ] Gestionar información de contacto.
+- [ ] Registrar contratos.
+- [ ] Adjuntar contratos y soportes.
+- [ ] Registrar vigencias.
+- [ ] Consultar historial de proveedores.
+- [ ] Realizar seguimiento a vencimientos.
+
+### 3.12. Mantenimiento y operación
+
+- [ ] Registrar novedades de zonas comunes.
+- [ ] Registrar mantenimientos preventivos.
+- [ ] Registrar mantenimientos correctivos.
+- [ ] Asignar responsables.
+- [ ] Registrar fechas y estados.
+- [ ] Adjuntar evidencias.
+- [ ] Consultar historial de mantenimiento.
+- [ ] Realizar seguimiento a actividades pendientes.
+
+### 3.13. Reuniones y decisiones administrativas
+
+- [ ] Registrar reuniones.
+- [ ] Organizar convocatorias.
+- [ ] Elaborar y almacenar actas.
+- [ ] Registrar decisiones.
+- [ ] Registrar compromisos.
+- [ ] Asignar responsables.
+- [ ] Hacer seguimiento a compromisos.
+
+### 3.14. Informes y reportes
+
+- [ ] Consultar información de personas e inmuebles.
+- [ ] Consultar cartera.
+- [ ] Consultar pagos y recaudos.
+- [ ] Consultar movimientos financieros.
+- [ ] Generar reportes administrativos.
 - [ ] Exportar información.
-- [ ] Facilitar la generación de informes administrativos.
+- [ ] Consultar indicadores básicos.
+- [ ] Generar informes por periodos.
 
-## 3. Requisitos transversales
+## 4. Requisitos transversales
 
-Estas características deberán considerarse desde el diseño inicial, aunque algunas funcionalidades se implementen progresivamente.
+Estas características deberán contemplarse desde el diseño inicial:
 
-- [ ] Interfaz clara, intuitiva y adaptable a diferentes tamaños de pantalla.
 - [ ] Arquitectura modular.
 - [ ] Separación de información entre copropiedades.
-- [ ] Seguridad y protección de datos personales.
-- [ ] Control de acceso por roles y permisos.
+- [ ] Control de acceso y permisos.
+- [ ] Protección de datos personales.
 - [ ] Validación de información.
 - [ ] Manejo de errores.
-- [ ] Registro de operaciones importantes.
-- [ ] Copias de seguridad y recuperación de información.
-- [ ] Capacidad de crecimiento y mantenimiento.
+- [ ] Trazabilidad de operaciones.
+- [ ] Diseño adaptable a diferentes pantallas.
+- [ ] Gestión segura de archivos.
+- [ ] Copias de seguridad y recuperación.
 - [ ] Importación y exportación de información.
-- [ ] Compatibilidad con los formatos de archivos definidos.
+- [ ] Pruebas funcionales y de seguridad.
+- [ ] Documentación técnica.
 
-## 4. Funcionalidades contempladas para etapas posteriores
+## 5. Funcionalidades contempladas para etapas posteriores
 
-No forman parte del alcance confirmado de la primera versión.
-
-- [ ] Portal de residentes.
-- [ ] Consulta de estados de cuenta por parte de residentes.
-- [ ] Consulta y descarga de documentos por parte de residentes.
-- [ ] Registro de solicitudes y PQR por residentes.
+- [ ] Portal de residentes y propietarios.
+- [ ] Consulta de estados de cuenta por residentes.
+- [ ] Descarga de documentos por residentes.
+- [ ] Registro de PQR desde el portal.
 - [ ] Notificaciones automáticas.
 - [ ] Aplicación móvil.
-- [ ] Integraciones con entidades bancarias.
+- [ ] Integraciones bancarias directas.
 - [ ] Integraciones con proveedores externos.
-- [ ] Automatización avanzada de procesos administrativos.
+- [ ] Automatización avanzada de procesos.
+- [ ] Tableros de indicadores avanzados.
 
-## 5. Criterios para considerar terminado el MVP
+## 6. Criterios de aceptación generales del MVP
 
-- [ ] La administración puede ingresar de manera segura.
-- [ ] Se puede crear y administrar una copropiedad.
-- [ ] Se pueden gestionar personas e inmuebles.
-- [ ] Se pueden consultar las relaciones entre personas e inmuebles.
-- [ ] Se pueden ejecutar los procesos financieros definidos para el MVP.
-- [ ] Se pueden gestionar los documentos y procesos administrativos priorizados.
-- [ ] La información de diferentes copropiedades permanece aislada.
-- [ ] Los procesos principales cuentan con validaciones y pruebas.
-- [ ] Existe documentación técnica y funcional suficiente para mantener el sistema.
-- [ ] La aplicación puede desplegarse en un entorno de producción.
+La primera versión deberá cumplir, como mínimo, con las siguientes condiciones:
 
-## 6. Estado del alcance
+- [ ] La administración puede autenticarse de manera segura.
+- [ ] Puede registrar y gestionar una copropiedad.
+- [ ] Puede administrar personas e inmuebles.
+- [ ] Puede consultar las relaciones entre personas e inmuebles.
+- [ ] Puede gestionar los procesos de cartera y pagos aprobados para el MVP.
+- [ ] Puede organizar y consultar documentos.
+- [ ] Puede consultar información administrativa centralizada.
+- [ ] Los usuarios solo acceden a la información autorizada.
+- [ ] Las operaciones principales cuentan con validaciones.
+- [ ] Las funcionalidades implementadas cuentan con pruebas.
+- [ ] Existe documentación suficiente para mantener y evolucionar el sistema.
 
-Este documento es una lista de trabajo inicial. Las casillas sin marcar no representan necesariamente funcionalidades aprobadas.
+## 7. Criterios para cerrar el alcance definitivo
 
-Cada módulo deberá pasar por un proceso de análisis que permita:
+Antes de iniciar el desarrollo se deberá:
 
-1. Confirmar si hace parte del MVP.
-2. Identificar sus procesos y reglas de negocio.
-3. Definir las historias de usuario.
-4. Establecer prioridades.
-5. Identificar dependencias con otros módulos.
-6. Definir criterios de aceptación.
-7. Estimar su complejidad de implementación.
+- [ ] Validar las necesidades de administración.
+- [ ] Revisar los procesos actuales y sus dificultades.
+- [ ] Identificar los archivos existentes que deberán migrarse.
+- [ ] Definir los módulos indispensables.
+- [ ] Identificar dependencias entre funcionalidades.
+- [ ] Definir reglas administrativas y financieras.
+- [ ] Establecer prioridades.
+- [ ] Completar las historias de usuario.
+- [ ] Aprobar formalmente el alcance del MVP.
 
-**Importante:** Kubo PH todavía no cuenta con una aplicación funcional implementada. La construcción del sistema comenzará después de completar la definición del producto, los requisitos y las decisiones técnicas iniciales.
+## 8. Control de alcance
+
+El alcance podrá modificarse durante la etapa de análisis.
+
+Toda modificación deberá reflejarse en:
+- La matriz de priorización.
+- Las historias de usuario.
+- Las reglas del negocio.
+- El modelo de datos.
+- La arquitectura, cuando corresponda.
+
+**Estado final:** Pendiente de validación y aprobación.
+
+Kubo PH se encuentra actualmente en etapa de documentación y análisis. No existe todavía una aplicación funcional implementada.
 
